@@ -30,15 +30,14 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t<img src=\"";
         // line 8
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
-        echo "img/logo/logo_jaguar.png\" alt=\"Logo\" class=\"logo\">
-\t\t\t\t\t\t<span class=\"primary-text\">Guadalajara y country</span>
+        echo "img/logo/logo.png\" alt=\"Logo\" class=\"logo\">
 \t\t\t\t\t</a>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"block-nav\">
 \t\t\t\t\t<ul class=\"navi menu\" id=\"menu\">
 \t\t\t\t\t\t<li class=\"navi-li li-top clearfix\">
 \t\t\t\t\t\t\t<a href=\"";
-        // line 15
+        // line 14
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "\" id=\"home-link\" class=\"home\">
 \t\t\t\t\t\t\t\t<span class=\"home\" id=\"home\">Inicio</span>
@@ -52,18 +51,18 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t<div class=\"inner-nav\">
 \t\t\t\t\t\t\t\t\t<ul class=\"inner-model inner-menu\" role=\"menu\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 26
+        // line 25
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["modelo"]) ? $context["modelo"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["model"]) {
-            // line 27
+            // line 26
             echo "\t\t\t\t\t\t\t\t\t\t\t<li class=\"model-list\" data-id=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["model"], "id", array()), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 28
+            // line 27
             if ($this->getAttribute($this->getAttribute($context["model"], "url_externa", array()), "url_target", array())) {
-                // line 29
+                // line 28
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["model"], "url_externa", array()), "url_target", array()), "html", null, true);
                 echo "\" id=\"model-";
@@ -73,10 +72,10 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
                 echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 31
+            // line 30
             echo "\t\t\t\t\t\t\t\t\t\t\t\t";
             if ($this->getAttribute($this->getAttribute($context["model"], "url_interna", array()), "url_target", array())) {
-                // line 32
+                // line 31
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
                 echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["model"], "url_interna", array()), "url_target", array()), "html", null, true);
@@ -87,7 +86,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
                 echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 34
+            // line 33
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
             echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
             echo "img/thumbs/";
@@ -96,7 +95,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
             echo twig_escape_filter($this->env, $this->getAttribute($context["model"], "name", array()), "html", null, true);
             echo "\" class=\"model-image vehicle\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"model\">";
-            // line 35
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute($context["model"], "name", array()), "html", null, true);
             echo "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
@@ -106,16 +105,16 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['model'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 38
         echo "\t\t\t\t\t\t\t\t\t\t";
-        // line 71
+        // line 70
         echo "\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"navi-li li-top clearfix\">
 \t\t\t\t\t\t\t<a href=\"";
-        // line 76
+        // line 75
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "news\" id=\"promos-link\" class=\"promos\">
 \t\t\t\t\t\t\t\t<span class=\"promos\" id=\"promos\">News</span>
@@ -123,18 +122,18 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"navi-li li-top agencies clearfix\">
 \t\t\t\t\t\t";
-        // line 87
+        // line 86
         echo "\t\t\t\t\t\t\t<a id=\"agencies-link\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t\t<span class=\"agencies has-dropdown\" id=\"agencie\">Servicio</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t";
-        // line 92
+        // line 91
         echo "\t\t\t\t\t\t\t\t\t";
-        // line 108
+        // line 107
         echo "\t\t\t\t\t\t\t\t\t<ul class=\"inner-agencie inner-menu\" role=\"menu\">
 \t\t\t\t\t\t\t\t\t\t<li class=\"agencie-list\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 110
+        // line 109
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "servicio\" id=\"agencie-gdl\" class=\"agencie-link\" data-agencie-key=\"servicio\" data-agencie-name=\"Servicio\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"agencie-title agencie\">
@@ -144,7 +143,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"agencie-list\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 117
+        // line 116
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "refacciones\" id=\"agencie-country\" class=\"agencie-link\" data-agencie-key=\"refacciones\" data-agencie-name=\"Refacciones\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"agencie-title agencie\">
@@ -154,18 +153,18 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t";
-        // line 126
+        // line 125
         echo "\t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"navi-li li-top agencies clearfix\">
 \t\t\t\t\t\t\t<a id=\"agencies-link\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t\t<span class=\"agencies has-dropdown\" id=\"agencie\">Agencias</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t";
-        // line 133
+        // line 132
         echo "\t\t\t\t\t\t\t\t\t<ul class=\"inner-agencie inner-menu\" role=\"menu\">
 \t\t\t\t\t\t\t\t\t\t<li class=\"agencie-list\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 135
+        // line 134
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "agencia/jaguar/guadalajara\" id=\"agencie-gdl\" class=\"agencie-link\" data-agencie-key=\"jaguar-guadalajara\" data-agencie-name=\"Jaguar Guadalajara\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"agencie-title agencie\">
@@ -175,7 +174,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"agencie-list\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 142
+        // line 141
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "agencia/jaguar/country\" id=\"agencie-country\" class=\"agencie-link\" data-agencie-key=\"jaguar-country\" data-agencie-name=\"Jaguar Country\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"agencie-title agencie\">
@@ -185,7 +184,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"agencie-list\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 149
+        // line 148
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "agenda/prueba-de-manejo\" id=\"euc-nav-schedule-test-drive\" class=\"agencie-link\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"agencie-title agencie\">
@@ -195,7 +194,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"agencie-list\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 156
+        // line 155
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "financiamiento\" id=\"euc-nav-fiancing\" class=\"agencie-link\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"agencie-title agencie\">
@@ -205,7 +204,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t";
-        // line 165
+        // line 164
         echo "\t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>
 \t\t\t\t</div>
@@ -240,7 +239,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 
     public function getDebugInfo()
     {
-        return array (  209 => 165,  199 => 156,  189 => 149,  179 => 142,  169 => 135,  165 => 133,  158 => 126,  148 => 117,  138 => 110,  134 => 108,  132 => 92,  127 => 87,  119 => 76,  112 => 71,  110 => 39,  100 => 35,  91 => 34,  80 => 32,  77 => 31,  67 => 29,  65 => 28,  60 => 27,  56 => 26,  42 => 15,  32 => 8,  28 => 7,  21 => 2,  19 => 1,);
+        return array (  208 => 164,  198 => 155,  188 => 148,  178 => 141,  168 => 134,  164 => 132,  157 => 125,  147 => 116,  137 => 109,  133 => 107,  131 => 91,  126 => 86,  118 => 75,  111 => 70,  109 => 38,  99 => 34,  90 => 33,  79 => 31,  76 => 30,  66 => 28,  64 => 27,  59 => 26,  55 => 25,  41 => 14,  32 => 8,  28 => 7,  21 => 2,  19 => 1,);
     }
 }
 /* {% set modelo = navpa %}*/
@@ -250,8 +249,7 @@ class __TwigTemplate_0fb3a8502821018a7df902b6a1f31b75cd36a8b9a3dd7c8503bfa2f8a4c
 /* 			<div class="col-xs-12">*/
 /* 				<div class="block-logo">*/
 /* 					<a href="{{ _host }}" class="home-link clearfix" id="home_link">*/
-/* 						<img src="{{ _host }}img/logo/logo_jaguar.png" alt="Logo" class="logo">*/
-/* 						<span class="primary-text">Guadalajara y country</span>*/
+/* 						<img src="{{ _host }}img/logo/logo.png" alt="Logo" class="logo">*/
 /* 					</a>*/
 /* 				</div>*/
 /* 				<div class="block-nav">*/

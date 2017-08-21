@@ -16705,7 +16705,7 @@ table {
       background: #000;
     }
     .nav-1 .logo {
-      max-height: 50px;
+      max-height: 80px;
       max-width: 100%;
       /*margin-right: 64px;*/
       margin-top: 15px;
@@ -18836,9 +18836,9 @@ table {
   }
 
   .nav-1 ul.navi {
-    width: 805px;
+    width: 100%;
     margin: 17px 0 17px;
-    padding-left: 270px;
+    padding-left: 0px;
   }
   .nav-1 ul.navi li.navi-li {
     display: inline-block;

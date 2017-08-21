@@ -78,50 +78,50 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 \t\t\t";
         // line 134
         $this->displayBlock('current_master', $context, $blocks);
-        // line 147
+        // line 145
         echo "\t\t\t
 \t\t\t";
-        // line 149
+        // line 147
         echo "\t\t\t<div class=\"nav-container\">
 \t\t\t\t";
-        // line 150
-        $this->loadTemplate("super.twig", "super.twig", 150, "211986290")->display($context);
-        // line 151
+        // line 148
+        $this->loadTemplate("super.twig", "super.twig", 148, "108601006")->display($context);
+        // line 149
         echo "\t\t\t</div>
 \t\t\t";
-        // line 153
+        // line 151
         echo "\t\t\t<div class=\"main-container\" id=\"header\">
 \t\t\t\t";
-        // line 155
+        // line 153
         echo "\t\t\t    <div class=\"wrapper_content_interactive\" id='content-temporal-interactive'>
 \t\t\t\t    <main class=\"cd-main-content\">
 \t\t\t\t    \t";
-        // line 157
+        // line 155
         $this->displayBlock('content_current', $context, $blocks);
-        // line 158
+        // line 156
         echo "\t\t\t\t    \t";
         $this->displayBlock('script_load_js', $context, $blocks);
-        // line 159
+        // line 157
         echo "\t\t\t\t    </main>
 \t\t\t    </div>
 \t\t\t    <div></div>
 \t\t\t    ";
-        // line 163
+        // line 161
         echo "\t\t    \t<footer class=\"footer-6\">
 \t\t\t\t\t";
-        // line 164
-        $this->loadTemplate("super.twig", "super.twig", 164, "386440288")->display($context);
-        // line 165
+        // line 162
+        $this->loadTemplate("super.twig", "super.twig", 162, "1388921140")->display($context);
+        // line 163
         echo "\t\t\t    </div>
 \t\t\t</div>
 \t\t\t";
-        // line 170
+        // line 168
         echo "\t        ";
         $this->displayBlock('body_scripts', $context, $blocks);
-        // line 187
+        // line 185
         echo "\t        
 \t        <script>";
-        // line 188
+        // line 186
         $this->displayBlock('load_scripts', $context, $blocks);
         echo "</script>
 \t\t</body>
@@ -162,7 +162,7 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 \t\t\t\t<meta itemprop=\"image\" content=\"";
         // line 30
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
-        echo "img/logo/logo_jaguar.png\"/>
+        echo "img/logo/logo.png\"/>
 
 \t\t\t\t<meta property=\"business:contact_data:website\" content=\"";
         // line 32
@@ -308,56 +308,51 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
         echo "\t\t\t\t<input id=\"master-max\" type=\"hidden\" value=\"";
         echo twig_escape_filter($this->env, (isset($context["_max"]) ? $context["_max"] : null), "html", null, true);
         echo "\">
-\t\t\t\t";
-        // line 140
-        echo "\t\t\t\t<input id=\"master-root-api\" type=\"hidden\" value=\"";
-        echo twig_escape_filter($this->env, (isset($context["_rootapi"]) ? $context["_rootapi"] : null), "html", null, true);
-        echo "\">
 \t\t\t\t
 \t\t\t\t";
-        // line 143
+        // line 141
         echo "\t\t        <div id=\"hidden-inputs-session\"></div>
 \t\t        ";
-        // line 145
+        // line 143
         echo "\t\t        <div id=\"hidden-inputs-temporal\"></div>
 \t\t\t";
     }
 
-    // line 157
+    // line 155
     public function block_content_current($context, array $blocks = array())
     {
     }
 
-    // line 158
+    // line 156
     public function block_script_load_js($context, array $blocks = array())
     {
     }
 
-    // line 170
+    // line 168
     public function block_body_scripts($context, array $blocks = array())
     {
-        // line 171
+        // line 169
+        echo "\t            ";
+        // line 170
         echo "\t            ";
         // line 172
-        echo "\t            ";
-        // line 174
         echo "\t            <script src=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "lib/min/core.lib.min.js\"></script>
 
 \t            ";
-        // line 177
+        // line 175
         echo "\t            <script type=\"text/javascript\" src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCCqo-F2TnMAABZvfV5yTQLlWvUCJlJViU&amp;sensor=false\"></script>
 \t\t            <script src=\"";
-        // line 178
+        // line 176
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/min/core.min.js\"></script>
 \t            ";
-        // line 186
+        // line 184
         echo "\t        ";
     }
 
-    // line 188
+    // line 186
     public function block_load_scripts($context, array $blocks = array())
     {
     }
@@ -374,20 +369,20 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 
     public function getDebugInfo()
     {
-        return array (  361 => 188,  357 => 186,  353 => 178,  350 => 177,  344 => 174,  342 => 172,  340 => 171,  337 => 170,  332 => 158,  327 => 157,  322 => 145,  319 => 143,  313 => 140,  308 => 138,  303 => 136,  298 => 134,  292 => 113,  242 => 65,  239 => 64,  233 => 59,  229 => 57,  224 => 52,  219 => 51,  216 => 50,  211 => 46,  208 => 45,  202 => 40,  198 => 39,  194 => 38,  190 => 37,  185 => 35,  182 => 34,  179 => 33,  175 => 42,  173 => 33,  169 => 32,  164 => 30,  157 => 26,  145 => 17,  136 => 10,  133 => 9,  125 => 188,  122 => 187,  119 => 170,  115 => 165,  113 => 164,  110 => 163,  105 => 159,  102 => 158,  100 => 157,  96 => 155,  93 => 153,  90 => 151,  88 => 150,  85 => 149,  82 => 147,  80 => 134,  59 => 115,  57 => 64,  52 => 61,  50 => 50,  46 => 48,  44 => 45,  40 => 43,  38 => 9,  29 => 2,);
+        return array (  356 => 186,  352 => 184,  348 => 176,  345 => 175,  339 => 172,  337 => 170,  335 => 169,  332 => 168,  327 => 156,  322 => 155,  317 => 143,  314 => 141,  308 => 138,  303 => 136,  298 => 134,  292 => 113,  242 => 65,  239 => 64,  233 => 59,  229 => 57,  224 => 52,  219 => 51,  216 => 50,  211 => 46,  208 => 45,  202 => 40,  198 => 39,  194 => 38,  190 => 37,  185 => 35,  182 => 34,  179 => 33,  175 => 42,  173 => 33,  169 => 32,  164 => 30,  157 => 26,  145 => 17,  136 => 10,  133 => 9,  125 => 186,  122 => 185,  119 => 168,  115 => 163,  113 => 162,  110 => 161,  105 => 157,  102 => 156,  100 => 155,  96 => 153,  93 => 151,  90 => 149,  88 => 148,  85 => 147,  82 => 145,  80 => 134,  59 => 115,  57 => 64,  52 => 61,  50 => 50,  46 => 48,  44 => 45,  40 => 43,  38 => 9,  29 => 2,);
     }
 }
 
 
 /* super.twig */
-class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2ae32a_211986290 extends Twig_Template
+class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2ae32a_108601006 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
-        // line 150
-        $this->parent = $this->loadTemplate("super_navbar.twig", "super.twig", 150);
+        // line 148
+        $this->parent = $this->loadTemplate("super_navbar.twig", "super.twig", 148);
         $this->blocks = array(
         );
     }
@@ -414,20 +409,20 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 
     public function getDebugInfo()
     {
-        return array (  390 => 150,  361 => 188,  357 => 186,  353 => 178,  350 => 177,  344 => 174,  342 => 172,  340 => 171,  337 => 170,  332 => 158,  327 => 157,  322 => 145,  319 => 143,  313 => 140,  308 => 138,  303 => 136,  298 => 134,  292 => 113,  242 => 65,  239 => 64,  233 => 59,  229 => 57,  224 => 52,  219 => 51,  216 => 50,  211 => 46,  208 => 45,  202 => 40,  198 => 39,  194 => 38,  190 => 37,  185 => 35,  182 => 34,  179 => 33,  175 => 42,  173 => 33,  169 => 32,  164 => 30,  157 => 26,  145 => 17,  136 => 10,  133 => 9,  125 => 188,  122 => 187,  119 => 170,  115 => 165,  113 => 164,  110 => 163,  105 => 159,  102 => 158,  100 => 157,  96 => 155,  93 => 153,  90 => 151,  88 => 150,  85 => 149,  82 => 147,  80 => 134,  59 => 115,  57 => 64,  52 => 61,  50 => 50,  46 => 48,  44 => 45,  40 => 43,  38 => 9,  29 => 2,);
+        return array (  385 => 148,  356 => 186,  352 => 184,  348 => 176,  345 => 175,  339 => 172,  337 => 170,  335 => 169,  332 => 168,  327 => 156,  322 => 155,  317 => 143,  314 => 141,  308 => 138,  303 => 136,  298 => 134,  292 => 113,  242 => 65,  239 => 64,  233 => 59,  229 => 57,  224 => 52,  219 => 51,  216 => 50,  211 => 46,  208 => 45,  202 => 40,  198 => 39,  194 => 38,  190 => 37,  185 => 35,  182 => 34,  179 => 33,  175 => 42,  173 => 33,  169 => 32,  164 => 30,  157 => 26,  145 => 17,  136 => 10,  133 => 9,  125 => 186,  122 => 185,  119 => 168,  115 => 163,  113 => 162,  110 => 161,  105 => 157,  102 => 156,  100 => 155,  96 => 153,  93 => 151,  90 => 149,  88 => 148,  85 => 147,  82 => 145,  80 => 134,  59 => 115,  57 => 64,  52 => 61,  50 => 50,  46 => 48,  44 => 45,  40 => 43,  38 => 9,  29 => 2,);
     }
 }
 
 
 /* super.twig */
-class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2ae32a_386440288 extends Twig_Template
+class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2ae32a_1388921140 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
-        // line 164
-        $this->parent = $this->loadTemplate("super_footer.twig", "super.twig", 164);
+        // line 162
+        $this->parent = $this->loadTemplate("super_footer.twig", "super.twig", 162);
         $this->blocks = array(
         );
     }
@@ -454,7 +449,7 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 
     public function getDebugInfo()
     {
-        return array (  430 => 164,  390 => 150,  361 => 188,  357 => 186,  353 => 178,  350 => 177,  344 => 174,  342 => 172,  340 => 171,  337 => 170,  332 => 158,  327 => 157,  322 => 145,  319 => 143,  313 => 140,  308 => 138,  303 => 136,  298 => 134,  292 => 113,  242 => 65,  239 => 64,  233 => 59,  229 => 57,  224 => 52,  219 => 51,  216 => 50,  211 => 46,  208 => 45,  202 => 40,  198 => 39,  194 => 38,  190 => 37,  185 => 35,  182 => 34,  179 => 33,  175 => 42,  173 => 33,  169 => 32,  164 => 30,  157 => 26,  145 => 17,  136 => 10,  133 => 9,  125 => 188,  122 => 187,  119 => 170,  115 => 165,  113 => 164,  110 => 163,  105 => 159,  102 => 158,  100 => 157,  96 => 155,  93 => 153,  90 => 151,  88 => 150,  85 => 149,  82 => 147,  80 => 134,  59 => 115,  57 => 64,  52 => 61,  50 => 50,  46 => 48,  44 => 45,  40 => 43,  38 => 9,  29 => 2,);
+        return array (  425 => 162,  385 => 148,  356 => 186,  352 => 184,  348 => 176,  345 => 175,  339 => 172,  337 => 170,  335 => 169,  332 => 168,  327 => 156,  322 => 155,  317 => 143,  314 => 141,  308 => 138,  303 => 136,  298 => 134,  292 => 113,  242 => 65,  239 => 64,  233 => 59,  229 => 57,  224 => 52,  219 => 51,  216 => 50,  211 => 46,  208 => 45,  202 => 40,  198 => 39,  194 => 38,  190 => 37,  185 => 35,  182 => 34,  179 => 33,  175 => 42,  173 => 33,  169 => 32,  164 => 30,  157 => 26,  145 => 17,  136 => 10,  133 => 9,  125 => 186,  122 => 185,  119 => 168,  115 => 163,  113 => 162,  110 => 161,  105 => 157,  102 => 156,  100 => 155,  96 => 153,  93 => 151,  90 => 149,  88 => 148,  85 => 147,  82 => 145,  80 => 134,  59 => 115,  57 => 64,  52 => 61,  50 => 50,  46 => 48,  44 => 45,  40 => 43,  38 => 9,  29 => 2,);
     }
 }
 /* {#{% spaceless %} #}*/
@@ -486,7 +481,7 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 /* */
 /* 				<meta itemprop="name" content="JAGUAR GUADALAJARA"/>*/
 /* 				<meta itemprop="description" content="Autos Jaguar Guadalajara, The Art of Performance. Conoce nuestra gama de autos de lujo, XE, XF, XJ, F-TYPE, F-PACE."/>*/
-/* 				<meta itemprop="image" content="{{ _host }}img/logo/logo_jaguar.png"/>*/
+/* 				<meta itemprop="image" content="{{ _host }}img/logo/logo.png"/>*/
 /* */
 /* 				<meta property="business:contact_data:website" content="{{ _host }}"/>*/
 /* 				{% block facebook_tag %}*/
@@ -595,8 +590,6 @@ class __TwigTemplate_b6a39e85773365aebd07144eae3e53af2090375a93486c5a90a7ce206d2
 /* 				<input id="master-host" type="hidden" value="{{ _host }}">*/
 /* 				{# Auxiliar Master Max Leads #}*/
 /* 				<input id="master-max" type="hidden" value="{{ _max }}">*/
-/* 				{# Auxiliar Master Root Api #}*/
-/* 				<input id="master-root-api" type="hidden" value="{{ _rootapi }}">*/
 /* 				*/
 /* 				{# Auxiliar Temporal Inputs's DIV #}*/
 /* 		        <div id="hidden-inputs-session"></div>*/
