@@ -147,12 +147,12 @@ $app->get("/", "ControlHome:__invoke");
                     "404/_main.twig"
                 );
                 //Facebook Metatags
-                parent::getTemplate()->makeFacebookTags(
+                /*parent::getTemplate()->makeFacebookTags(
                     _LOC . ": Página no encontrada.", 
                     _LOC,
                     _LOC,
                     _HOST . "img/logo/safe_walk.png"
-                );
+                );*/
                 //(Site Name)
                 //(Name Default)
                 //(Description)
@@ -190,12 +190,12 @@ $app->get("/", "ControlHome:__invoke");
                     "_home/_main.twig"
                 );
                 //Facebook Metatags
-                parent::getTemplate()->makeFacebookTags(
+                /*parent::getTemplate()->makeFacebookTags(
                     _LOC, 
                     _LOC,
                     _LOC,
                     _HOST . "img/logo/safe_walk.png"
-                );
+                );*/
             }        
         /**
          * Just catches the Slim route and renders the related template.
