@@ -1,0 +1,9 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content_current %}
+	{% embed "blog/detalles/container.twig" %}{% endembed %}
+{% endblock %}
+{% block load_scripts %}
+	jagBlog._init();
+	$(window).on("scroll", scrollHeader.init);
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content_current %}
+	<div style="padding-top: 97px; background-color: #e1dfdf;"></div>
+	{# Utiity Bar #}
+	<div class="utility-bar">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-12 col-sm-12 col-xs-12">
+	                <ol class="breadcrumb">
+	                    <li><a href="{{ _host }}" id="return_index"><i class="fa fa-home"></i> Inicio</a></li>
+	                    <li class=""><a href="{{ _host }}news" id="back-news">Noticias</a></li>
+	                    <li class="active">Plan de financiamiento Compra Inteligente.</li>
+	                </ol>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	{# Start Body Content #}
+    <div class="main" role="main">
+        <div id="content" class="content full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 single-post">
+                        <header class="single-post-header clearfix">
+                            <div class="post-actions">
+                                <div class="post-date">14 de Julio de 2017</div>
+                                <div class="comment-count"><a href="{{ _host }}news" id="back-news"><i class="fa fa-chevron-left"></i> Regresar</a></div>
+                            </div>
+                            <h2 class="post-title">Plan de financiamiento Compra Inteligente</h2>
+                        </header>
+                        <article class="post-content">
+                            {#<h3 class="post-subtitle">DISEÑADO EXCLUSIVAMENTE PARA HOY</h3>#}
+                            {#
+                            <p>Manejando todos los modelos de Jaguar por las calles de la ciudad, felicidades a todos los que se atrevieron a descubrir que tan vivos están.</p>
+                            #}
+                            <p>Finalmente el Jaguar que siempre has querido puede ser tuyo con el nuevo plan de financiamiento compra inteligente.</p>
+                            <p>1° Pago Inicial accesible.</p>
+                            <p>2° Pagos mensuales muy atractivos que parten desde $5,313.00 por un plazo de 24 ó 36 meses lo que usted elija.</p>
+                            <p>No afecta su flujo de efectivo durante el plazo del crédito y le permitirá disfrutar de su Jaguar sin que se endeude.</p>
+                            <p>3° Al finalizar el plazo del crédito tiene las siguientes opciones:</p>
+                            <p>Dejar el auto y llevarse otro completamente nuevo.</p>
+                            <p>Ampliar el credito o liquidar el saldo restante y quedarse con su auto.</p>
+                            <p>En resumen: Con compra inteligente tiene: Accesibilidad, Flexibilidad de pagos y toda la seguridad que cuenta con la aprobación y calidad de Jaguar. </p>
+                            <div class="featured-image featured-image-mobile">
+                                <a>
+                                    <img src="{{ _host }}img/promo/compra-inteligente.jpg" alt="..." class="post-img">
+                                </a>
+                            </div>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/OmwQ8Z9HmZE" frameborder="0" allowfullscreen></iframe>
+                            <p style="font-size: 10px;">*Los monto expresados por pago inicial y pagos mensuales, son de uso netamente informativo y puede variar. Sujeto  a la cotización directa por parte del personal autorizado del distribuidor, Son variables según el plazo, año y modelo, no incluye I.V.A. Las  Imágenes son de uso netamente ilustrativo. Más información con el distribuidor.</p>
+                        </article>
+                        <div id="content-address"></div>
+                    </div>
+                    {# Start Sidebar #}
+                    <div class="col-md-3 sidebar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block load_scripts %}
+	jagBlog._init();
+    $(window).on("scroll", scrollHeader.init);
+{% endblock %}

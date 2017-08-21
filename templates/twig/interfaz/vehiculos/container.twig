@@ -1,0 +1,219 @@
+{% set modelo = mdopa %}
+<section class="instagram-1" style="padding: 0px; height: 0px; background-color: #fff; clear: both;"></section>
+{% set jagpa = modelo.jaguar.no_select %}
+{% if modelo.details.jaguar.no_select %}
+	<section class="image-block">
+		<div class="image-holder col-md-6 col-sm-12 pull-right">
+			<div class="background-image-holder overlay-light-gradient-slider">
+				<img alt="Slide Background" class="background-image" src="{{ _host }}img/modelos/{{ modelo.details.jaguar.no_select.image_holder }}">
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-sm-7">
+					<div class="text-block">
+						<div class="detail-line"></div>
+						<h5>{{ modelo.details.jaguar.no_select.sub_model }}</h5>
+						<h4 class="primaryHeader text-white"></h4>
+						{% for parrafo in modelo.details.jaguar.no_select.parrafos %}
+							<p>
+								{{ parrafo.p }}
+							</p>
+						{% endfor %}
+					</div>
+				</div>
+			</div>{# end of row #}
+		</div>{# end of container #}
+	</section>
+	<section class="team-2">
+		{# end of row #}
+		<div class="row">
+			<div class="col-md-12">
+				<h2 style="color: #000;">OTROS MODELOS</h2>
+			</div>
+		</div>
+		<div class="row">
+			{% for others in modelo.details.jaguar.no_select.version.row %}
+				<div class="{{ others.class_team }} team-member" data-id="{{ others.id }}">
+					<a class="imageLink TargetLinks" href="{{ others.url }}" target="{{ others.target }}">
+						<img alt="{{ others.alt }}" src="{{ _host }}img/modelos/{{ others.img }}?v=4" />
+					</a>
+					<h3>{{ others.title }}</h3>
+					<p></p>
+				</div>
+			{% endfor %}
+		</div>{# end of row #}
+	</section>
+	<section class="instagram-1" style="padding: 0px; height: 0px; background-color: #fff; clear: both;"></section>
+	<section class="dark-action" style="padding: 0px 0px 30px; height: auto;">
+		{#<div class="container">#}
+			<div class="row">
+				{#{% for action in modelo.details.jaguar.no_select.actions %}#}
+					{% if modelo.details.jaguar.no_select.actions.return %}
+						<div class="{{ modelo.details.jaguar.no_select.actions.return.class_action }} text-center">
+							<a class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-xs-12 col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em;" href="{{ _host }}{{ modelo.details.jaguar.no_select.actions.return.href }}">
+								<span style="max-width: 100%; font-size: 0.9em; display: block; text-transform: uppercase; font-family: 'font_name_landrover_light';" class="to-html">
+									{{ modelo.details.jaguar.no_select.actions.return.ico }}
+								</span>
+								{{ modelo.details.jaguar.no_select.actions.return.return }}
+							</a>
+						</div>
+					{% endif %}
+					{% if modelo.details.jaguar.no_select.actions.catalogo %}
+						<div class="{{ modelo.details.jaguar.no_select.actions.catalogo.class_action }} text-center">
+							<a class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-xs-12 col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em;" href="{{ _host }}files/{{ modelo.details.jaguar.no_select.actions.catalogo.href }}" download="{{ modelo.details.jaguar.no_select.actions.catalogo.title }}">
+								<span style="max-width: 100%; font-size: 0.9em; display: block; text-transform: uppercase; font-family: 'font_name_landrover_light';">
+									{{ modelo.details.jaguar.no_select.actions.catalogo.title_light }}
+								</span>
+								{{ modelo.details.jaguar.no_select.actions.catalogo.title_strong }}
+							</a>
+						</div>
+					{% endif %}
+					{% if modelo.details.jaguar.no_select.actions.ficha_tecnica %}
+						<div class="{{ modelo.details.jaguar.no_select.actions.ficha_tecnica.class_action }} text-center">
+							<a class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-xs-12 col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em;" href="{{ _host }}files/{{ modelo.details.jaguar.no_select.actions.ficha_tecnica.href }}" download="{{ modelo.details.jaguar.no_select.actions.ficha_tecnica.title }}">
+								<span style="max-width: 100%; font-size: 0.9em; display: block; text-transform: uppercase; font-family: 'font_name_landrover_light';">
+									{{ modelo.details.jaguar.no_select.actions.ficha_tecnica.title_light }}
+								</span>
+								{{ modelo.details.jaguar.no_select.actions.ficha_tecnica.title_strong }}
+							</a>
+						</div>
+					{% endif %}
+					{% if modelo.details.jaguar.no_select.actions.testdrive %}
+						<div class="{{ modelo.details.jaguar.no_select.actions.testdrive.class_action }} text-center">
+							<a class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-xs-12 col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em;" href="{{ _host }}{{ modelo.details.jaguar.no_select.actions.testdrive.href }}">
+								<span style="max-width: 100%; font-size: 0.9em; display: block; text-transform: uppercase; font-family: 'font_name_landrover_light';">
+									{{ modelo.details.jaguar.no_select.actions.testdrive.title_light }}
+								</span>
+								{{ modelo.details.jaguar.no_select.actions.testdrive.title_strong }}
+							</a>
+						</div>
+					{% endif %}
+					{% if modelo.details.jaguar.no_select.actions.financing %}
+						<div class="{{ modelo.details.jaguar.no_select.actions.financing.class_action }} text-center">
+							<a class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-xs-12 col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em;" href="{{ _host }}{{ modelo.details.jaguar.no_select.actions.financing.href }}">
+								<span style="max-width: 100%; font-size: 0.9em; display: block; text-transform: uppercase; font-family: 'font_name_landrover_light';">
+									{{ modelo.details.jaguar.no_select.actions.financing.title_light }}
+								</span>
+								{{ modelo.details.jaguar.no_select.actions.financing.title_strong }}
+							</a>
+						</div>
+					{% endif %}				
+				{#{% endfor %}#}
+			</div>{# end of row #}
+		{#</div>{# end of container #}
+	</section>
+{% endif %}
+{% if modelo.details.jaguar.select %}
+	{#{% for fullscreen in modelo.details.jaguar.select.image_holder %}#}
+	{% if modelo.details.jaguar.select.image_holder %}
+		<section class="no-pad fullscreen-projects">
+			{% if modelo.details.jaguar.select.image_holder.convertible %}
+				<div class="project image-holder col-sm-3">
+					<div class="background-image-holder">
+						<img alt="Project Image" class="background-image" src="{{ _host }}img/holder_models/{{ modelo.details.jaguar.select.image_holder.convertible.imagen }}">
+					</div>
+					<div class="hover-state text-center">
+						<span class="vertical-align">
+							<div class="hover-content">
+								<div class="detail-line"></div>
+								<h5 class="primaryHeader text-white">{{ modelo.details.jaguar.select.image_holder.convertible.title }}</h5>
+								<a href="{{ modelo.details.jaguar.select.image_holder.convertible.url_target }}" id="" class="secondary left cur-hover" data-animate="">VER MODELOS</a>
+							</div>
+						</span>
+					</div>
+					<div class="static-state text-left">
+						<div class="block clearfix">
+							<div class="textPrimary">
+								<span class="text-white text-center">{{ modelo.details.jaguar.select.image_holder.convertible.title }}</span>
+							</div>
+							<div class="block-button">
+								<a href="{{ modelo.details.jaguar.select.image_holder.convertible.url_target }}" id="" class="text-jaguar secondary left cur-hover" target="_blank" data-animate="">VER MODELOS</a>
+							</div>
+						</div>
+					</div>
+				</div><!--end of inidividual project-->
+			{% endif %}
+			{% if modelo.details.jaguar.select.image_holder.coupe %}
+				<div class="project col-sm-6 image-holder">
+					<div class="background-image-holder">
+						<img alt="Project Image" class="background-image" src="{{ _host }}img/holder_models/{{ modelo.details.jaguar.select.image_holder.coupe.imagen }}">
+					</div>
+					<div class="hover-state text-center">
+						<span class="vertical-align">
+							<div class="hover-content">
+								<div class="detail-line"></div>
+								<h5 class="primaryHeader text-white">{{ modelo.details.jaguar.select.image_holder.coupe.title }}</h5>
+								<a href="{{ modelo.details.jaguar.select.image_holder.coupe.url_target }}" id="" class="secondary left cur-hover" data-animate="">VER MODELOS</a>
+							</div>
+						</span>
+					</div>
+					<div class="static-state text-left">
+						<div class="block clearfix">
+							<div class="textPrimary">
+								<span class="text-white text-center">{{ modelo.details.jaguar.select.image_holder.coupe.title }}</span>
+							</div>
+							<div class="block-button">
+								<a href="{{ modelo.details.jaguar.select.image_holder.coupe.url_target }}" id="" class="text-jaguar secondary left cur-hover" target="_blank" data-animate="">VER MODELOS</a>
+							</div>
+						</div>
+					</div>
+				</div><!--end of inidividual project-->
+			{% endif %}
+		</section>
+	{% endif %}
+	{#{% endfor %}#}
+	{#
+	<section class="no-pad fullscreen-projects">
+		<div class="project image-holder col-sm-3">
+			<div class="background-image-holder">
+				<img alt="Project Image" class="background-image" src="{{ _host }}img/holder_models/select_f_type_conv.png">
+			</div>
+			<div class="hover-state text-center">
+				<span class="vertical-align">
+					<div class="hover-content">
+						<div class="detail-line"></div>
+						<h5 class="primaryHeader text-white">F-TYPE CONVERTIBLE</h5>
+						<a href="{{ _host }}vehiculos/convertible" class="secondary left cur-hover" data-animate="">VER MODELOS</a>
+					</div>
+				</span>
+			</div>
+			<div class="static-state text-left">
+				<div class="block clearfix">
+					<div class="textPrimary">
+						<span class="text-white text-center">F-TYPE CONVERTIBLE</span>
+					</div>
+					<div class="block-button">
+						<a href="{{ _host }}vehiculos/convertible" class="text-jaguar secondary left cur-hover" target="_blank" data-animate="">VER MODELOS</a>
+					</div>
+				</div>
+			</div>
+		</div><!--end of inidividual project-->
+
+		<div class="project col-sm-6 image-holder">
+			<div class="background-image-holder">
+				<img alt="Project Image" class="background-image" src="{{ _host }}img/holder_models/select_f_type_coupe.png">
+			</div>
+			<div class="hover-state text-center">
+				<span class="vertical-align">
+					<div class="hover-content">
+						<div class="detail-line"></div>
+						<h5 class="primaryHeader text-white">F-TYPE COUPÉ</h5>
+						<a href="{{ _host }}vehiculos/coupe" class="secondary left cur-hover" data-animate="">VER MODELOS</a>
+					</div>
+				</span>
+			</div>
+			<div class="static-state text-left">
+				<div class="block clearfix">
+					<div class="textPrimary">
+						<span class="text-white text-center">F-TYPE COUPÉ</span>
+					</div>
+					<div class="block-button">
+						<a href="{{ _host }}vehiculos/coupe" class="text-jaguar secondary left cur-hover" target="_blank" data-animate="">VER MODELOS</a>
+					</div>
+				</div>
+			</div>
+		</div><!--end of inidividual project-->
+	</section>
+	#}
+{% endif %}

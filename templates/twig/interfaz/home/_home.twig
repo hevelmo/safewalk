@@ -1,0 +1,14 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content_current %}
+	{% embed "home/slider.twig" %}{% endembed %}
+{% endblock %}
+{% block script_load_js %}
+	{% embed "super_loadjs.twig" %}{% endembed %}
+{% endblock %}
+{% block load_scripts %}
+	jagHome._init();
+	init_hero_slider.hero_slider();
+	$(window).on("scroll", scrollHeader.init);
+	toHtmlMethod.toHtml();
+{% endblock %}

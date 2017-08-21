@@ -1,0 +1,93 @@
+{% set agencia = agnpa %}
+<div class="tab_content_agencies animation-fadeIn container">
+    <section class="" style="background-color: #e1dfdf; padding: 35px 15px 15px;">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-4 text-center">
+                <h5 style="color: #000; text-transform: uppercase;"><span style="color:#7a7a7a;">{{ agencia.name }}</span></h5>
+                <img src="{{ _host }}img/agencias/logos/logo_jaguar_land_rover.png" alt="" class="x-img x-img-none none agn_logo">
+            </div>
+            <div class="col-md-8 col-sm-8 text-left" style="font-size: 16px; padding: 20px 5px 0px;">
+                <div class="contact-method">
+                    <i class="icon pe-7s-phone agn_icono"></i>
+                    <span class="agn_span">
+                        <strong>Ventas: {{ agencia.telefono.ventas.telefono }}</strong>
+                    </span>
+                </div>
+                <div class="contact-method">
+                    <i class="icon pe-7s-map-marker agn_icono"></i>
+                    <span class="agn_span">
+                        {{ agencia.domicilio }}
+                    </span>
+                </div>
+                <div class="contact-method">
+                    <i class="icon pe-7s-clock agn_icono"></i>
+                    <span class="agn_span">
+                        <strong>Ventas:</strong> {{ agencia.horarios.ventas }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        {#<div class="row">
+            <div class="col-md-12 text-center" style="padding: 35px;">
+                <div class="col-md-6 col-xs-12 col-sm-6">
+                    <a href="http://eurocavsa.com.mx/" class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em; margin: 0 15px 10px 15px;" target="_blank">
+                        <i class="fa fa-globe fa-fw fa-lg"></i> SITIO WEB
+                    </a>
+                </div>
+                <div class="col-md-6 col-xs-12 col-sm-6">
+                    <a href="http://eurocavsa.com.mx/" class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-md-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em; margin: 0 15px 0 15px;" target="_blank">
+                        <i class="fa fa-facebook fa-fw fa-lg"></i> JAGUAR
+                    </a>
+                </div>
+            </div>
+        </div>#}
+        <div class="row">
+            <div id="content-agencie-form">
+                <section class="contact-2" style="padding: 15px 0 15px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-6 text-center" style="padding-top: 10px;">
+                                <div class="text-block">
+                                    <div class="detail-line"></div>
+                                    <!--<h5>Contact Us</h5>-->
+                                    <h4 style="color: #000;">Contacto</h4>
+                                    <!--<p>
+                                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
+                                    </p>-->
+                                </div>
+                            </div>
+
+                            <div class="contact_main">
+                                <div class="col-md-6 col-sm-12 contact_content">
+                                    {% embed "agencias/contact_from.twig" %}{% endembed %}                    
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6" style="padding-top: 10px;">
+                                <div class="col-md-11 col-xs-12 col-sm-6">
+                                    <a href="{{ agencia.social.sitio }}" class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-md-12 col-xs-12 col-sm-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em; margin: 0 15px 10px 15px;" target="_blank">
+                                        <i class="fa fa-globe fa-fw fa-lg"></i> SITIO WEB
+                                    </a>
+                                </div>
+                                <div class="col-md-11 col-xs-12 col-sm-6">
+                                    <a href="{{ agencia.social.facebook }}" class="primaryLinkWithStyle plwsTransparentLight TargetLinks col-md-12 col-xs-12 col-sm-12" style="display: inline-block; vertical-align: middle; font-size: 1.3em; margin: 0 15px 0 15px;" target="_blank">
+                                        <i class="fa fa-facebook fa-fw fa-lg"></i> FACEBOOK
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div><!--end of row-->
+                    </div><!--end of container-->
+                </section>
+            </div>
+        </div>
+    </section>
+    <div id="content-agencies-news-map" class="agentia-location">
+        <iframe src="{{ agencia.mapa.frame }}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    {#<a href="" class="btn btn-default btn_default visible-xs" title="VIEW MAP" target="_blank">
+        <i class="icon icon-geolocalizator"></i>
+        <span>VER MAPA</span>
+    </a>#}
+</div>

@@ -1,0 +1,23 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content_current %}
+	{% embed "test_drive/hero_slider.twig" %}{% endembed %}
+	{% embed "test_drive/general/container.twig" %}{% endembed %}
+{% endblock %}
+{% block script_load_js %}
+	{#
+	{% embed "super_lab.twig" %}{% endembed %}
+	{% embed "super_loadjs.twig" %}{% endembed %}
+	#}
+{% endblock %}
+{% block load_scripts %}
+	jagTestDrive._init();
+	$('.background-image-holder').each(function() {
+        var imgSrc= $(this).children('img').attr('src');
+        $(this).css('background', 'url("' + imgSrc + '")');
+        $(this).children('img').hide();
+        $(this).css('background-position', '15% 65%');
+    });
+    $('.background-image-holder').addClass('fadeIn');
+    $(window).on("scroll", scrollHeader.init);
+{% endblock %}

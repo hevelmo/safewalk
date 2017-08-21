@@ -1,0 +1,119 @@
+{% set url_banner = "img/banner/" %}
+{% set url_video = "img/video/" %}
+{# Begin index: slider principal #}
+{# googleon: all #}
+<div class="HeroCarousel inner fontSmooth" data-total="8" id="295-83457">
+	{# royalSlider #}
+	<div class="carousel royalSlider">
+        {% block banners %}
+            {% for slider in banpa %}
+                {% set on = slider.on_video %}
+                {% if on %}
+                    <div class="heroItem {{ on.class }} alignedText left overlay-light-gradient-slider" data-slideid="{{ slider.id }}" data-audio="false">
+                {% else %}
+                    <div class="heroItem alignedText left overlay-light-gradient-slider" data-slideid="{{ slider.id }}" data-audio="false">
+                {% endif %}
+                        {% set banners = slider.pictures %}
+                        <span data-alt="{{ slider.name }}" data-background-image="" data-picture="" data-align="right center">
+                            <span data-alt="{{ slider.name }}" data-src="{{ _host }}{{ url_banner }}{{ banners.650 }}?v=1"></span>
+                            <span data-alt="{{ slider.name }}" data-default="true" data-media="(min-width: 651px)" data-src="{{ _host }}{{ url_banner }}{{ banners.900 }}?v=1"></span>
+                            <span data-media="(min-width: 901px)" data-src="{{ _host }}{{ url_banner }}{{ banners.1600 }}?v=3"></span>
+                            <noscript>
+                                <div style="background-image:url({{ _host }}{{ url_banner }}{{ banners.1600 }}?v=3);width:100%;height:100%;"></div>
+                            </noscript>
+                        </span>
+                        <div class="heroContent headerBox withImage">
+                            <div class="headerBoxContent">
+                                <h1 class="primaryHeading heading">
+                                    <span class="headingWrapper">
+                                        <span class="headingTextMain to-html">{{ slider.text_main.title }}</span>
+                                        <span class="headingTextSub">
+                                            {% set sub = slider.subtitle %}
+                                            {% if sub %}
+                                                <span class="subtitle to-html">{{ sub.text_sub.subtitle }}</span>
+                                            {% endif %}
+                                        </span>                                        
+                                    </span>
+                                </h1>
+                                {% block links %}
+                                    <div class="linkContainer">
+                                        {% if slider.links.primary %}
+                                            <span class="primaryLinkContainer">
+                                                {% if slider.links.primary.ext %}
+                                                    <a class="primaryLinkWithStyle plwsLight TargetLinks {{ slider.links.primary.ext }}" href="{{ slider.links.primary.href }}" data-link-desktop="{{ slider.links.primary.href }}" data-target="current" id="HeroCarousel:MÁS INFORMACIÓN:{{ slider.links.primary.href }}" target="{{ slider.links.primary.target }}">
+                                                {% endif %}
+                                                {% if slider.links.primary.int %}
+                                                    <a class="primaryLinkWithStyle plwsLight TargetLinks {{ slider.links.primary.int }}" href="{{ _host }}{{ slider.links.primary.href }}" data-link-desktop="{{ _host }}{{ slider.links.primary.href }}" data-target="current" id="HeroCarousel:MÁS INFORMACIÓN:{{ _host }}{{ slider.links.primary.href }}" target="{{ slider.links.primary.target }}">
+                                                {% endif %}
+                                                {% if slider.links.primary.mod %}
+                                                    <a class="primaryLinkWithStyle plwsLight TargetLinks {{ slider.links.primary.mod }}" data-modal-target="{{ slider.links.primary.data }}">
+                                                {% endif %}
+                                                        <span>{{ slider.links.primary.title }}</span>
+                                                    </a>
+                                                {% if slider.links.primary.modal %}
+                                                    <div class="hidden" id="{{ slider.links.primary.modal.id }}">
+                                                        <img src="{{ _host }}img/promo/{{ slider.links.primary.modal.href }}" alt=". . .">
+                                                    </div>
+                                                {% endif %}
+                                            </span>
+                                        {% endif %}
+                                        {% if slider.links.secondary %}
+                                            <span class="secondaryLinkContainer">
+                                                {% if slider.links.secondary.ext %}
+                                                    <a class="primaryLinkWithStyle plwsLight TargetLinks {{ slider.links.secondary.ext }}" href="{{ slider.links.secondary.href }}" data-link-desktop="{{ slider.links.secondary.href }}" data-target="current" id="HeroCarousel:MÁS INFORMACIÓN:{{ slider.links.secondary.href }}" target="{{ slider.links.secondary.target }}">
+                                                {% endif %}
+                                                {% if slider.links.secondary.int %}
+                                                    <a class="primaryLinkWithStyle plwsLight TargetLinks {{ slider.links.secondary.int }}" href="{{ _host }}{{ slider.links.secondary.href }}" data-link-desktop="{{ _host }}{{ slider.links.secondary.href }}" data-target="current" id="HeroCarousel:MÁS INFORMACIÓN:{{ _host }}{{ slider.links.secondary.href }}" target="{{ slider.links.secondary.target }}">
+                                                {% endif %}
+                                                        <span>{{ slider.links.secondary.title }}</span>
+                                                    </a>
+                                            </span>
+                                        {% endif %}
+                                    </div>
+                                {% endblock %}
+                            </div>
+                        </div>
+                        {% if slider.video_player %}
+                            <div class="VideoPlayer clearfix" data-audio="false" data-autoplay="false" data-title="{{ slider.video_player.title }}" data-type="video" dir="ltr">
+                                <div class="playerWrapper">
+                                    {# Used when there's no user interaction. E.g. HeroCarousel  #}
+                                    <video class="video" controls="controls" height="100%" preload="none" width="100%">
+                                        <source 
+                                            data-1080="{{ _host }}{{ url_video }}{{ slider.video_player.formato.mp4.1080 }}" 
+                                            data-360="{{ _host }}{{ url_video }}{{ slider.video_player.formato.mp4.360 }}" 
+                                            data-480="{{ _host }}{{ url_video }}{{ slider.video_player.formato.mp4.480 }}" 
+                                            data-720="{{ _host }}{{ url_video }}{{ slider.video_player.formato.mp4.720 }}" 
+                                            src="{{ _host }}{{ url_video }}{{ slider.video_player.formato.mp4.src }}" 
+                                            type="video/mp4" />  
+                                        <source 
+                                            data-1080="{{ _host }}{{ url_video }}{{ slider.video_player.formato.webm.1080 }}" 
+                                            data-360="{{ _host }}{{ url_video }}{{ slider.video_player.formato.webm.360 }}" 
+                                            data-480="{{ _host }}{{ url_video }}{{ slider.video_player.formato.webm.480 }}" 
+                                            data-720="{{ _host }}{{ url_video }}{{ slider.video_player.formato.webm.720 }}" 
+                                            src="{{ _host }}{{ url_video }}{{ slider.video_player.formato.webm.src }}" type="video/webm" /> 
+                                        <track data-autoplay="false" kind="subtitles" src="/index.srt?view=subtitle&amp;subtitleId=7515" srclang="es"></track>
+                                        <object data="{{ _host }}{{ url_video }}flash/mediaelement/flashmediaelement.swf" height="360" type="application/x-shockwave-flash" width="640">
+                                            <param name="movie" value="{{ _host }}{{ url_video }}flash/mediaelement/flashmediaelement.swf" />
+                                            <param name="flashvars" value="controls=true&amp;file={{ _host }}{{ url_video }}{{ slider.video_player.formato.mp4.src }}" />
+                                            <span class="fallbackImage" data-alt="" data-background-image="" data-picture="" data-picture-ignore="">
+                                                <span data-src="{{ _host }}{{ url_banner }}{{ slider.video_player.pictures.400 }}?v=3"></span>
+                                                <span data-media="(min-width: 355px)" data-src="{{ _host }}{{ url_banner }}{{ slider.video_player.pictures.900 }}?v=2"></span>
+                                                <span data-default="true" data-media="(min-width: 700px)" data-src="{{ _host }}{{ url_banner }}{{ slider.video_player.pictures.1600 }}?v=3"></span>
+                                                <span data-media="(min-width: 1000px)" data-src="{{ _host }}{{ url_banner }}{{ slider.video_player.pictures.1600 }}?v=3"></span>
+                                                <noscript>
+                                                    <img src="{{ _host }}{{ url_banner }}{{ slider.video_player.pictures.1600 }}?v=2" alt="" />
+                                                </noscript>
+                                            </span>
+                                        </object>
+                                    </video>
+                                    {# Used when there's user interaction with the video #}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+            {% endfor %}
+        {% endblock %}
+	</div>
+</div>
+{# googleoff: all #}
+{# End index #}

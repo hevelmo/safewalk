@@ -1,0 +1,124 @@
+{% set agencia = agnpa %}
+<form class="email-form-lrgdl" id="contacto">
+	{#<p><span style="color: red; font-size: 12px;">Los campos marcados con <span style="color: red;" class="fa fa-asterisk"></span> son requeridos</span></p>#}
+	<div class="contact_elements">
+		<div class="contact_element a">
+			<fieldset>
+				<label for="jag_name" style="display: none;">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Nombre
+                </label>
+				<input class="input-standard validate-required form-control" type="text"
+					name="nombre"
+					id="jag_name"
+					placeholder="Nombre" style="width: 100%"
+					data-validation-data="required|name">
+                <p class="invalid-message" id="error_nombre">Este campo es obligatorio<span>&nbsp;</span></p>
+			</fieldset>
+		</div>
+		<div class="contact_element b">
+			<fieldset>
+				<label for="jag_lastname" style="display: none;">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Apellidos
+                </label>
+				<input class="input-standard validate-required form-control" type="text"
+					name="apellidos"
+					id="jag_lastname"
+					placeholder="Apellidos" style="width: 100%"
+					data-validation-data="required|name">
+                <p class="invalid-message" id="error_nombre">Este campo es obligatorio<span>&nbsp;</span></p>
+			</fieldset>
+		</div>
+	</div>
+	<div class="contact_elements">
+		<div class="contact_element a">
+			<fieldset>
+				<label for="jag_email" style="display: none;">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Correo electrónico
+                </label>
+				<input class="input-standard validate-required form-control" type="text"
+					name="correo"
+					id="jag_email"
+					placeholder="Correo" style="width: 100%"
+					data-validation-data="required|email">
+                <p class="invalid-message" id="error_correo">Este campo es obligatorio<span>&nbsp;</span></p>
+			</fieldset>
+		</div>
+		<div class="contact_element b">
+			<fieldset>
+				<label for="jag_phone" style="display: none;">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Número de celular
+                </label>
+				<input class="input-standard validate-required form-control" type="text"
+					name="telefono"
+					id="jag_phone"
+					maxlength="13"
+					placeholder="Teléfono" style="width: 100%"
+					data-validation-data="required|phone">
+				<p class="invalid-message" id="error_phone">Este campo es obligatorio<span>&nbsp;</span></p>
+			</fieldset>
+		</div>
+	</div>
+	<p class="border-bottom mt10 pb10" style="color: #000;">
+        Comentarios <br>
+        <span style="font-size: 12px;">Escribe tus necesidades, tenemos un plan para tí.</span>
+    </p>
+    <p></p>
+	<div class="contact_elements">
+		<div class="contact_element ab">
+			<fieldset>
+				<label for="jag_message" style="display: none;">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Mensaje
+                </label>
+				<textarea class="input-standard validate-required form-control"
+					name="mensaje"
+					id="jag_message"
+					placeholder="Mensaje" rows="4"
+					data-validation-data="required|address"></textarea>
+				<p class="invalid-message" id="error_mensaje">Este campo es obligatorio<span>&nbsp;</span></p>
+			</fieldset>
+		</div>
+	</div>
+	<div class="contact_elements hidden">
+		<div class="contact_element ab">
+			<fieldset id="contact_elements_input_hidden">
+				<input type="hidden" name="agencia" id="jag_agn" value="{{ agencia.name|upper }}">
+				<input type="hidden" name="producto" id="jag_producto" value="CONTACTO {{ agencia.name|upper }}">
+				<input type="hidden" name="business_max" id="jag_business_max" value="{{ agencia.business_max }}">
+			</fieldset>
+		</div>
+	</div>
+</form>
+<div class="contact_elements">
+    <div class="contact_element a">
+        <fieldset>
+            <div id="loader_send_icon" class="form-loader" style="display: none;">
+                <div class="loader">
+                    <div class="loader-wrap">
+                        <div class="loader-item"></div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="contact_element b">
+        <fieldset>
+            <div class="pl0" id="button_leads_form_financing">
+                <button class="primaryLinkWithStyle plwsTransparentLight TargetLinks is_empty_email send_contact_form col-md-12 contact-form-send" style="font-size: 1.3em; margin-top: 0px;" id="contact-send">
+                    <span>ENVIAR</span>
+                </button>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="contact_elements">
+    <div class="contact_element ab">
+        <fieldset>
+            <p id="revisa_aviso" style="color: inherit;">
+                Tus datos están a salvo.<br>
+                Para mayor información revisa nuestro <a href="{{ _host }}aviso-de-privacidad" target="_blank">Aviso de privacidad</a>
+            </p>
+        </fieldset>
+    </div>
+</div>
+<div class="clearfix"></div>

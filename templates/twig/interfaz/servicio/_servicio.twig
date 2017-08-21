@@ -1,0 +1,80 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content_current %}
+	{% embed "servicio/hero_slider.twig" %}{% endembed %}
+    {# MOBILE #}
+    {#
+    <div id="slidePanel" class="mobile-panel my-hidden-form hiding">
+        <div class="mobile-slide-panel">
+            <div class="mobile-header-panel">
+                <h3>Servicio</h3>
+                <a href="#slidePanel" class="menu-link">
+                    <span><i class="fa fa-times"></i></span>
+                </a>
+            </div>
+            <div class="mobile-body-panel">
+                <div class="scroll scroll-sample scrollable autohide" style="height: 560px;">
+                    <div style="height: 600px;">
+                        {% embed "servicio/service_form.twig" %}
+                            {% set scope = "mobile" %}
+                        {% endembed %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    #}
+    
+    <div class="wrapper-buttons-mobile mobile-section">
+        <div class="mobile-container col-md-12 col-xs-12">
+            <div class="row">
+                <div class="col-xs-6 mobile-action" style="padding-left: 15px;">
+                    <a href="tel:3338187543" class="btn btn-info col-xs-12 price buttons" style="background: #9e1b32; color: #fff; border-color: #9e1b32; border-radius: 0px;">
+                        <i class="fa fa-phone fa-fw fa-lg"></i>
+                        <span>Llámanos</span>
+                    </a>
+                </div>
+                <div class="col-xs-6 mobile-action" style="padding-left: 15px;">
+                    <a href="#0" class="btn btn-info col-xs-12 price {#buttons#} menu-link cd-btn" style="background: #9e1b32; color: #fff; border-color: #9e1b32; border-radius: 0px;">
+                        <i class="fa fa-envelope-o fa-fw fa-lg"></i>
+                        <span>Contacto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#<div class="wrap push">#}
+        <a class="section-separator" name="contacto"></a>
+        {% embed "servicio/container.twig" %}{% endembed %}
+    {#</div>#}
+    <div class="cd-panel from-right">
+        <header class="cd-panel-header">
+            <h1>Servicio</h1>
+            <a href="#0" class="cd-panel-close"><i class="fa fa-times fa-fw fa-lg cd-panel-close" style="position: relative; left: 20px;"></i></a>
+        </header>
+        <div class="cd-panel-container">
+            <div class="cd-panel-content">
+                {# your side content here #}
+                {% embed "servicio/service_form.twig" %}
+                    {% set scope = "mobile" %}
+                {% endembed %}
+            </div> {# cd-panel-content #}
+        </div> {# cd-panel-container #}
+    </div> {# cd-panel #}
+{% endblock %}
+{% block load_scripts %}
+    {{ parent() }}
+    $(".my-hidden-form").removeClass("hiding");
+	jagService._init();
+	//serviceForm_gdl.urlValue();
+	$('.background-image-holder').each(function() {
+        var imgSrc= $(this).children('img').attr('src');
+        $(this).css('background', 'url("' + imgSrc + '")');
+        $(this).children('img').hide();
+        $(this).css('background-position', '15% 65%');
+    });
+    $('.background-image-holder').addClass('fadeIn');
+    $(window).on("scroll", scrollHeader.init);
+    {#$('.menu-link').bigSlide();#}
+    mobileSection.buttonsSection();
+{% endblock %}
