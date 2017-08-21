@@ -1,4 +1,4 @@
-{% set modelo = navpa %}
+
 <nav class="nav-1 header-scroll">
 	<div class="container">
 		<div class="row">
@@ -15,161 +15,44 @@
 								<span class="home" id="home">Inicio</span>
 							</a>
 						</li>
-						<li class="navi-li li-top vehicles clearfix">
-							<a id="vehicles-link" class="vehicles dropdown-toggle">
-								<span class="car has-dropdown" id="car">Vehículos</span>
+						<li class="navi-li li-top clearfix">
+							<a href="{{ _host }}nosotros" id="about-link" class="about">
+								<span class="about" id="about">Nosotros</span>
 							</a>
-							<div class="model-select-block">
-								<div class="inner-nav">
-									<ul class="inner-model inner-menu" role="menu">
-										{% for model in modelo %}
-											<li class="model-list" data-id="{{ model.id }}">
-												{% if model.url_externa.url_target %}
-													<a href="{{ model.url_externa.url_target }}" id="model-{{ model.key }}" class="model-link" target="{{ model.target }}">
-												{% endif %}
-												{% if model.url_interna.url_target %}
-													<a href="{{ _host }}{{ model.url_interna.url_target }}" id="model-{{ model.key }}" class="model-link" target="{{ model.target }}">
-												{% endif %}
-													<img src="{{ _host }}img/thumbs/{{ model.thumb }}" width="130" height="75" alt="{{ model.name }}" class="model-image vehicle">
-													<span class="model">{{ model.name }}</span>
-												</a>
-											</li>
-										{% endfor %}
-										{#
-										<li class="model-list">
-											<a href="http://www.jaguar-mexico.com/jaguar-range/xe/index.html" id="model-xe" class="model-link" target="_blank">
-												<img src="{{ _host }}img/thumbs/thumb-xe.png" width="130" height="75" alt="" class="model-image vehicle">
-												<span class="model">XE</span>
-											</a>
-										</li>
-										<li class="model-list">
-											<a href="{{ _host }}vehiculos/xf" id="model-xf" class="model-link">
-												<img src="{{ _host }}img/thumbs/thumb-xf-2011.png" width="130" height="75" alt="NA LR2 12MY" class="model-image vehicle">
-												<span class="model">XF</span>
-											</a>
-										</li>
-										<li class="model-list">
-											<a href="{{ _host }}vehiculos/xj" id="model-xj" class="model-link">
-												<img src="{{ _host }}img/thumbs/thumb-xj-2011.png" width="130" height="75" alt="12MY Discovery 4" class="model-image vehicle">
-												<span class="model">XJ</span>
-											</a>
-										</li>
-										<li class="model-list">
-											<a id="model-f-pace" href="http://www.jaguar-mexico.com/jaguar-range/f-pace/index.html" target="_blank" class="model-link">
-												<img src="{{ _host }}img/thumbs/thumb-f-pace.png" width="150" height="75" alt="12MY Discovery 4" class="model-image vehicle">
-												<span class="model">F-PACE</span>
-											</a>
-										</li>
-										<li class="model-list">
-											<a href="{{ _host }}vehiculos/f-type" id="model-ftype" class="model-link">
-												<img src="{{ _host }}img/thumbs/thumb-ftype.png" width="130" height="75" alt="range-rover-405-homepage-130x75" class="model-image vehicle">
-												<span class="model">F-TYPE</span>
-											</a>
-										</li>
-										#}
-									</ul>
-								</div>
-							</div>
 						</li>
 						<li class="navi-li li-top clearfix">
-							<a href="{{ _host }}news" id="promos-link" class="promos">
-								<span class="promos" id="promos">News</span>
+							<a href="{{ _host }}productos" id="products-link" class="products">
+								<span class="products" id="products">Productos</span>
 							</a>
 						</li>
-						<li class="navi-li li-top agencies clearfix">
-						{#
 						<li class="navi-li li-top clearfix">
-							<a href="{{ _host }}servicio" id="service-link" class="service">
-								<span class="service" id="service">Servicio	</span>
+							<a href="{{ _host }}servicios" id="services-link" class="services">
+								<span class="services" id="services">Servicios</span>
 							</a>
-							#}
-							<a id="agencies-link" class="dropdown-toggle">
-								<span class="agencies has-dropdown" id="agencie">Servicio</span>
-							</a>
-							{#<div class="agencies-select-block" style="display: none; visibility: visible">
-								<div class="inner-nav">#}
-									{#<ul class="inner-agencie inner-menu" role="menu">
-										<li class="agencie-list">
-											<a href="{{ _host }}servicio/jaguar/guadalajara" id="agencie-gdl" class="agencie-link" data-agencie-key="jaguar-guadalajara" data-agencie-name="Jaguar Guadalajara">
-												<div class="agencie-title agencie">
-													<span class="agencie">Jaguar Guadalajara</span>
-												</div>
-											</a>
-										</li>
-										<li class="agencie-list">
-											<a href="{{ _host }}servicio/jaguar/country" id="agencie-country" class="agencie-link" data-agencie-key="jaguar-country" data-agencie-name="Jaguar Country">
-												<div class="agencie-title agencie">
-													<span class="agencie">Jaguar Country</span>
-												</div>
-											</a>
-										</li>
-									</ul>#}
-									<ul class="inner-agencie inner-menu" role="menu">
-										<li class="agencie-list">
-											<a href="{{ _host }}servicio" id="agencie-gdl" class="agencie-link" data-agencie-key="servicio" data-agencie-name="Servicio">
-												<div class="agencie-title agencie">
-													<span class="agencie">Servicio</span>
-												</div>
-											</a>
-										</li>
-										<li class="agencie-list">
-											<a href="{{ _host }}refacciones" id="agencie-country" class="agencie-link" data-agencie-key="refacciones" data-agencie-name="Refacciones">
-												<div class="agencie-title agencie">
-													<span class="agencie">Refacciones</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								{#</div>
-							</div>#}
 						</li>
-						<li class="navi-li li-top agencies clearfix">
-							<a id="agencies-link" class="dropdown-toggle">
-								<span class="agencies has-dropdown" id="agencie">Agencias</span>
+						<li class="navi-li li-top clearfix">
+							<a href="{{ _host }}soporte" id="support-link" class="support">
+								<span class="support" id="support">Soporte</span>
 							</a>
-							{#<div class="agencies-select-block" style="display: none; visibility: visible">
-								<div class="inner-nav">#}
-									<ul class="inner-agencie inner-menu" role="menu">
-										<li class="agencie-list">
-											<a href="{{ _host }}agencia/jaguar/guadalajara" id="agencie-gdl" class="agencie-link" data-agencie-key="jaguar-guadalajara" data-agencie-name="Jaguar Guadalajara">
-												<div class="agencie-title agencie">
-													<span class="agencie">Jaguar Guadalajara</span>
-												</div>
-											</a>
-										</li>
-										<li class="agencie-list">
-											<a href="{{ _host }}agencia/jaguar/country" id="agencie-country" class="agencie-link" data-agencie-key="jaguar-country" data-agencie-name="Jaguar Country">
-												<div class="agencie-title agencie">
-													<span class="agencie">Jaguar Country</span>
-												</div>
-											</a>
-										</li>
-										<li class="agencie-list">
-											<a href="{{ _host }}agenda/prueba-de-manejo" id="euc-nav-schedule-test-drive" class="agencie-link">
-												<div class="agencie-title agencie">
-													<span class="agencie">Prueba de Manejo</span>
-												</div>
-											</a>
-										</li>
-										<li class="agencie-list">
-											<a href="{{ _host }}financiamiento" id="euc-nav-fiancing" class="agencie-link">
-												<div class="agencie-title agencie">
-													<span class="agencie">Financiamiento</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								{#</div>
-							</div>#}
+						</li>
+						<li class="navi-li li-top clearfix">
+							<a href="{{ _host }}galeria" id="gallery-link" class="gallery">
+								<span class="gallery" id="gallery">Galería</span>
+							</a>
+						</li>
+						<li class="navi-li li-top clearfix">
+							<a href="{{ _host }}contacto" id="contact-link" class="contact">
+								<span class="contact" id="contact">Contacto</span>
+							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="block-social-links">
 					<ul class="social-links">
-						<li><a href="http://www.facebook.com/JaguarGDLCountry" target="_blank"><i class="social_facebook"></i></a></li>
+						{#<li><a href="http://www.facebook.com/JaguarGDLCountry" target="_blank"><i class="social_facebook"></i></a></li>
 						<li><a href="https://twitter.com/JaguarCarsGDL" target="_blank"><i class="social_twitter"></i></a></li>
 						<li><a href="https://www.youtube.com/channel/UCdRywhIb0Sc3diJ-4fuEypQ" target="_blank"><i class="social_youtube"></i></a></li>
-						<li><a href="https://instagram.com/jaguarguadalajara/" target="_blank"><i class="social_instagram"></i></a></li>
+						<li><a href="https://instagram.com/jaguarguadalajara/" target="_blank"><i class="social_instagram"></i></a></li>#}
 					</ul>
 				</div>
 			</div>

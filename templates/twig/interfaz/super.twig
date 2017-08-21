@@ -13,20 +13,20 @@
 				<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 				<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
 
-				<meta name="title" content="JAGUAR GUADALAJARA">
+				<meta name="title" content="{{ _loc }}">
 				<meta name="identifier-url" content="{{ _host }}" />
 				<meta name="keywords" content="Jaguar, Land Rover. Seminuevos Premium, Eurocavsa" />
-				<meta name="author" content="JAGUAR GUADALAJARA" />
+				<meta name="author" content="{{ _loc }}" />
 				<meta name="language" content="ES" />
-				<meta name="copyright" content="© 2016 JAGUAR GUADALAJARA, How Alive are you?." />
+				<meta name="copyright" content="© {{ _anio }} {{ _loc }}" />
 				
 				<meta name="robots" content="index, follow">
 				<meta name="googlebot" content="robots.txt">
 
-				<meta itemprop="image" content="{{ _host }}img/logo/logo_jaguar.png">
+				<meta itemprop="image" content="{{ _host }}img/logo/logo.png">
 
-				<meta itemprop="name" content="JAGUAR GUADALAJARA"/>
-				<meta itemprop="description" content="Autos Jaguar Guadalajara, The Art of Performance. Conoce nuestra gama de autos de lujo, XE, XF, XJ, F-TYPE, F-PACE."/>
+				<meta itemprop="name" content="{{ _loc }}"/>
+				<meta itemprop="description" content="{{ _loc }}"/>
 				<meta itemprop="image" content="{{ _host }}img/logo/logo.png"/>
 
 				<meta property="business:contact_data:website" content="{{ _host }}"/>
@@ -43,7 +43,7 @@
 
 			<title>
 				{% block title %}
-					JAGUAR GUADALAJARA
+					{{ _loc }}
 				{% endblock %}
 			</title>
 			
@@ -173,14 +173,14 @@
 
 	            {# GOOGLE API #}
 	            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCqo-F2TnMAABZvfV5yTQLlWvUCJlJViU&amp;sensor=false"></script>
-		            <script src="{{ _host }}js/min/core.min.js"></script>
 	            {#
+		            <script src="{{ _host }}js/min/core.min.js"></script>
+	            #}
 		            <script src="{{ _host }}js/main.js"></script>
 					<script src="{{ _host }}js/method.js"></script>
 					<script src="{{ _host }}js/model.js"></script>
 					<script src="{{ _host }}js/objects.js"></script>
 		            <script src="{{ _host }}js/required.js"></script>
-	            #}
 	        {% endblock %}
 	        
 	        <script>{% block load_scripts %}{% endblock %}</script>

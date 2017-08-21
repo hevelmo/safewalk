@@ -195,7 +195,7 @@ table {
     margin-bottom: 0px;
     float: left;
     font-weight: bold;
-    font-family: 'jaguarregular',Arial,Helvetica,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .from-right .cd-panel-header, .from-left .cd-panel-header {
     top: -50px;
@@ -5195,9 +5195,9 @@ table {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 21px;
     color: #333333;
     background-color: #ffffff;
   }
@@ -11220,7 +11220,7 @@ table {
     body {
       background-color: #e1dfdf;
       clear: both;
-      font-family: 'ProximaNovaRegular','Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
       color: #777;
@@ -14365,7 +14365,7 @@ table {
     text-transform: uppercase;
   }
   .heroContent-promo p.promo-p {
-    font: 500 20px/1.5em 'ProximaNovaRegular',Arial,Helvetica,sans-serif;
+    font: 500 20px/1.5em Arial,Helvetica,sans-serif;
     letter-spacing: 0.12em;
     color: #fff;
     margin-top: 9px;
@@ -14374,7 +14374,7 @@ table {
   }
   .subHeading {
     color: #cbcbce;
-    font-family: 'ProximaNovaRegular',Arial,Helvetica,sans-serif;
+    font-family: Arial,Helvetica,sans-serif;
     margin: 20px auto 0;
     font-size: 14px;
     text-align: center;
@@ -14383,7 +14383,7 @@ table {
     max-width: 80%;
   }
   .subOverview {
-    font-family: 'ProximaNovaRegular',Arial,Helvetica,sans-serif;
+    font-family: Arial,Helvetica,sans-serif;
     font-size: 20px;
     line-height: 1.5em;
     color: #c2c2c2;
@@ -15949,7 +15949,7 @@ table {
     color: rgba(55, 71, 79, 0.53);
     line-height: 1.4em;
     font-size: 10px;
-    font-family: 'ProximaNovaRegular',Arial,Helvetica,sans-serif;
+    font-family: Arial,Helvetica,sans-serif;
     font-weight: bold;
     display: inline-block;
     text-align: center;
@@ -16647,7 +16647,7 @@ table {
       float: left;
     }
     .home-link span {
-      font-family: 'ProximaNovaRegular','Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 600;
       text-transform: uppercase;
       position: absolute;
@@ -16657,7 +16657,7 @@ table {
       color: #fff;
     }
     .nav-1 {
-      background: rgba(72, 72, 72, 0.5);
+      background: url('../img/carpi.png') rgba(255, 255, 255, 0.5);
       position: fixed;
       top: 0;
       width: 100%;
@@ -16688,12 +16688,12 @@ table {
         padding-left: 255px;
         padding-right: 255px;
     }
-    .nav-1:hover .model-select-block,
+    /*.nav-1:hover .model-select-block,
     .nav-1:hover,
     .nav-1.header-scroll.active:hover,
     .nav-1.header-scroll.active:hover .model-select-block {
       background: rgba(239, 238, 236, 0.89);
-    }
+    }*/
     .nav-1:hover .home-link span.primary-text {
     color: #495a62;
     }
@@ -17671,7 +17671,7 @@ table {
       margin-bottom: 80px;
     }
     .footer-4 .social-links a {
-      font-family: 'ProximaNovaRegular', 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family:  'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       font-weight: bold;
       color: #0054a6;
