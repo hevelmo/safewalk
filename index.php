@@ -75,7 +75,7 @@ $app->get("/", "ControlHome:__invoke");
             function __construct($masterConfigArray, $twigConfig, $name) {
                 $this->bases    = new Bases();
                 $this->router   = new Router();
-                $this->curl     = new Curl("api/v1/");
+                $this->curl     = new Curl(_HOST . "api/v1/");
                 $this->template = new Template(
                     "templates/twig/interfaz", 
                     $name, 
@@ -124,6 +124,16 @@ $app->get("/", "ControlHome:__invoke");
                 return $this->sitio;
             }
         **/
+        /**
+         * This abstract method ensures that each child class will have an standar method
+         * To be used like a handler of its related Slim route.
+         * The declared arguments are wich a Slim handler method needs.
+         * 
+         * @param   Slim\Http\Request       $request 
+         * @param   Slim\Http\Response      $response 
+         * @param   array                   $args
+        **/
+        abstract public function __invoke($request, $response, $args);
     }
 /**
  * CONTROL 404
@@ -168,7 +178,6 @@ $app->get("/", "ControlHome:__invoke");
         **/
             public function __invoke($request, $response, $args) {
                 //parent::getRouter()->setRouteParams($request, $response, $args);
-                //parent::lastUrl();
             }
     }
 /**
@@ -206,9 +215,9 @@ $app->get("/", "ControlHome:__invoke");
         **/
             public function __invoke($request, $response, $args) {
                 parent::getRouter()->setRouteParams($request, $response, $args);
-                parent::getTemplate()->addToMasterConfigArray(parent::getRouter()->getArgs());
+            	parent::getTemplate()->addToMasterConfigArray(parent::getRouter()->getArgs());
 
                 parent::getTemplate()->display();
-                //echo "<pre>", print_r(parent::getTemplate()->getMasterConfigArray()), "</pre>";
+            	//echo "<pre>", print_r(parent::getTemplate()->getMasterConfigArray()), "</pre>";
             }
     }
