@@ -19,8 +19,8 @@ include_once "core/Medigraf/Router.php";
 include_once "core/Medigraf/Curl.php";
 include_once "core/Medigraf/Template.php";
 
-// Site
-include_once "core/Site/Sitio.php";
+// SITIO
+//include_once "core/Site/Sitio.php";
 
 $container = new \Slim\Container();
 
@@ -60,7 +60,7 @@ $app->get("/", "ControlHome:__invoke");
          * @var Curl       $curl       new Curl() instance
          * @var Template   $template   new Template() instance
         **/
-            private $bases, $router, $curl, $template, $sitio;        
+            private $bases, $router, $curl, $template/*, $sitio*/;        
         /**
          * Constructor
          * 
@@ -75,7 +75,7 @@ $app->get("/", "ControlHome:__invoke");
             function __construct($masterConfigArray, $twigConfig, $name) {
                 $this->bases    = new Bases();
                 $this->router   = new Router();
-                $this->curl     = new Curl(_SITIO . "api/v1/");
+                $this->curl     = new Curl("api/v1/");
                 $this->template = new Template(
                     "templates/twig/interfaz", 
                     $name, 
@@ -92,7 +92,7 @@ $app->get("/", "ControlHome:__invoke");
                     )
                 );
                 // SITIO
-                $this->sitio = new Sitio();
+                //$this->sitio = new Sitio();
             }        
         /**
          * @return  Bases   With its related methods and performance.
@@ -120,38 +120,10 @@ $app->get("/", "ControlHome:__invoke");
             }
         /**
          * @return  Site   With its related methods and performance.
-        **/
             public function getSitio() {
                 return $this->sitio;
-            }        
-        /**
-         * This abstract method ensures that each child class will have an standar method
-         * To be used like a handler of its related Slim route.
-         * The declared arguments are wich a Slim handler method needs.
-         * 
-         * @param   Slim\Http\Request       $request 
-         * @param   Slim\Http\Response      $response 
-         * @param   array                   $args
-        **/
-            abstract public function __invoke($request, $response, $args);
-        /**
-         * Description
-         * @return type
-        **/
-            public function lastUrl() {
-                if (isset($_SESSION["last_url"])) {
-                    $currentUrl = $this->getRouter()->getCurrentUrl();
-                    if ($currentUrl !== $_SESSION["last_url"]) {
-                        $this->getTemplate()->addToMasterConfigArray("last_url", $_SESSION["last_url"]);
-                    } else {
-                        $this->getTemplate()->addToMasterConfigArray("last_url", _SITIO);
-                    }
-                    $_SESSION["last_url"] = $currentUrl;
-                } else {
-                    $this->getTemplate()->addToMasterConfigArray("last_url", _SITIO);
-                    $_SESSION["last_url"] = _SITIO;
-                }
             }
+        **/
     }
 /**
  * CONTROL 404
@@ -169,18 +141,22 @@ $app->get("/", "ControlHome:__invoke");
             function __construct() {
                 parent::__construct(
                     array(
-                        "title" => "CAMCAR | Página no encontrada"
+                        "title" => _LOC . " | Página no encontrada"
                     ), 
                     array(), 
                     "404/_main.twig"
                 );
                 //Facebook Metatags
                 parent::getTemplate()->makeFacebookTags(
-                    "CAMCAR: Site Name", 
-                    "CAMCAR (Name Default)", 
-                    "CAMCAR: Description",
-                    _HOST . "img/logos/logo_camcar.png"
+                    _LOC . ": Página no encontrada.", 
+                    _LOC,
+                    _LOC,
+                    _HOST . "img/logo/safe_walk.png"
                 );
+                //(Site Name)
+                //(Name Default)
+                //(Description)
+                //(Site Logo)
             }        
         /**
          * This inherited method don't do nothing however is mandatory to implement it
@@ -230,13 +206,9 @@ $app->get("/", "ControlHome:__invoke");
         **/
             public function __invoke($request, $response, $args) {
                 parent::getRouter()->setRouteParams($request, $response, $args);
-                parent::lastUrl();
                 parent::getTemplate()->addToMasterConfigArray(parent::getRouter()->getArgs());
 
-                //$slider = parent::getSite()->getBanner();
-                //parent::getTemplate()->addToMasterConfigArray('revpa', $slider);
-
-                //echo "<pre>", print_r(parent::getTemplate()->getMasterConfigArray()), "</pre>";
                 parent::getTemplate()->display();
+                //echo "<pre>", print_r(parent::getTemplate()->getMasterConfigArray()), "</pre>";
             }
     }

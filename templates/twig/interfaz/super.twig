@@ -47,15 +47,15 @@
 			</title>
 			
 			{% block links %}
+				{#
                 <link rel="stylesheet" href="{{ _host }}css/styles.css">
                 <link rel="stylesheet" href="{{ _host }}css/import.css">
-				{#
                 <link rel="stylesheet" href="{{ _host }}css/styles.min.css">
-                #}
-
 				<link rel="alternate" href="http://landrovergdl.com.mx/" hreflang="es-mx" />
 				<link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
 				<link rel="shortcut icon" href="{{ _host }}img/ico/icolandrover.ico">
+                #}
+
 			{% endblock %}
 			{# Google Analytics #}
 
@@ -104,21 +104,17 @@
 				</script>
 				<script src="{{ _host }}lib/assets/modernizr.js"></script>
             {% endblock %}
-            {# Facebook Pixel Code #}
-			<script>
-				!function(f,b,e,v,n,t,s)
-				{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-				n.queue=[];t=b.createElement(e);t.async=!0;
-				t.src=v;s=b.getElementsByTagName(e)[0];
-				s.parentNode.insertBefore(t,s)}(window,document,'script',
-				'https://connect.facebook.net/en_US/fbevents.js');
-			 	fbq('init', '388345931302119'); 
-				fbq('track', 'PageView');
-			</script>
-			<noscript>
-		 		<img height="1" width="1" src="https://www.facebook.com/tr?id=388345931302119&ev=PageView &noscript=1"/>
-			</noscript>
-			{# End Facebook Pixel Code #}
 		</head>
+		<body>
+			<input id="master-host" type="hidden" value="{{ _host }}">
+			<input id="master-max" type="hidden" value="{{ _max }}">
+			{# Templates's DIV #}
+	        <div class="wrapper_content_interactive {#push wrap#}" id="content-temporal-interactive">
+	            {% block content_recurrent %}{% endblock %}
+	        </div>
+	        <script>
+	            {% block load_scripts %}
+	            {% endblock %}
+	        </script>
+		</body>
+	</html>
