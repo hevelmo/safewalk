@@ -78,7 +78,7 @@ class Template
                 $this,
                 $methodName
             ), $args);
-            //Otherwise
+        //Otherwise
         } else {
         }
     }
@@ -209,7 +209,7 @@ class Template
                 $methodName
             ), $args);
             ksort($this->masterConfigArray);
-            //Otherwise
+        //Otherwise
         } else {
         }
     }
