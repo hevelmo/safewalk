@@ -32,7 +32,7 @@ class Router
                 $this,
                 $methodName
             ), $args);
-        //Otherwise
+            //Otherwise
         } else {
         }
     }
@@ -95,7 +95,7 @@ class Router
                 $this,
                 $methodName
             ), $args);
-        //Otherwise
+            //Otherwise
         } else {
         }
     }

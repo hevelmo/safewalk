@@ -398,24 +398,6 @@ class Consult
     }
     
     /**
-     * This method executes an UPDATE query. A delete query will never be restructured.
-     */
-    public function updateQuery() 
-    {
-        $this->typeQuery = 2;
-        $this->executeQuery();
-    }
-    
-    /**
-     * This method executes a DELETE query. A delete query will never be restructured.
-     */
-    public function deleteQuery() 
-    {
-        $this->typeQuery = 3;
-        $this->executeQuery();
-    }
-    
-    /**
      * From this class $packname and $resultArray and changeArrayIntoJSON function.
      * A string with JSON structure is returned.
      * This method is used when it's desired to get the result.
